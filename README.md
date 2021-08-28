@@ -52,7 +52,7 @@ hello_world_c
 └── README.md                  
 ```
 
-Note: the CMakeLists.txt files contain "hello_world", being the original project name. There is NO relation with the name of the project folder (hello_world_c). THe project compiles and flashes well.
+Note: the CMakeLists.txt files contain "hello_world", being the original project name. There is NO relation with the name of the project folder (hello_world_c). The project compiles and flashes well.
 
 
 The contents of the folder is copied into a new folder for the C++ code:
@@ -76,7 +76,7 @@ hello_world_cpp
 4. Rename the file “hello_world_main.c” in the folder “project_name\main\ ” into “main.cpp”.
 5. Open “project_name\main\main.cpp” file using any text editor and edit: add the following statement extern “C” { void app_main(); } before void app_main() , see Figure 4, save the file.
 
-I presume that 3,4 and 5 are the essential changes.
+
 
 contents of hello_world_main.c:
 **BEFORE**
@@ -105,3 +105,5 @@ void app_main(void)
 
     /* Print chip information */
 ```
+
+I presumed that 3,4 and 5 are the essential changes, so I skipped 1 and 2 :-). The code compiles and runs well!
