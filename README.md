@@ -15,7 +15,7 @@ Espressif offers a extensively documented (link) firmware development system (ES
 
 The solution is nearby!
 
-Recently I found this article ( https://www.deeptronic.com/software-design/developing-esp32-application-with-esp-idf-and-c-in-windows/). It is on "conversion" of a C example code into C++ code or, better, on creation of a C++ wrapper around the original code such that it can be built and flashed from the ESP-IDF environment as C++ code. A subsequent described step is to extract relevant portions of the C code and convert that into C++ modules or libraries. This may open up a way to use existing C++ libraries in the code, which is of course a huge advantage.
+Recently I found this article ( https://www.deeptronic.com/software-design/developing-esp32-application-with-esp-idf-and-c-in-windows). It is on "conversion" of a C example code into C++ code or, better, on creation of a C++ wrapper around the original code such that it can be built and flashed from the ESP-IDF environment as C++ code. A subsequent described step is to extract relevant portions of the C code and convert that into C++ modules or libraries. This may open up a way to use existing C++ libraries in the code, which is of course a huge advantage.
 
 In this repo I do the walktrough example described in the article. This starts with the Espressif hello_world example written in C (folder name) and goes via functionally identical code that wraps the C code but that can be complied in C++ (folder name) and ends with code where parts of the C code have been replaced by C++ code. I **do NOT** describe the details of the walktrough as the article does that perfectly. I may note down some learnings or summarizing remarks.
 
