@@ -78,7 +78,9 @@ hello_world_cpp
 
 I presume that 3,4 and 5 are the essential changes.
 
-#include "freertos/task.h"
+contents of hello_world_main.c:
+
+```
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 
@@ -87,4 +89,19 @@ void app_main(void)
     printf("Hello world of C!\n");
 
     /* Print chip information */
+```
 
+contents of main.cpp:
+
+```
+#include "esp_system.h"
+#include "esp_spi_flash.h"
+
+extern “C” { void app_main(); }
+
+void app_main(void)
+{
+    printf("Hello world of C++!\n");
+
+    /* Print chip information */
+```
