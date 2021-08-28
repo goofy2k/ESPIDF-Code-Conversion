@@ -52,10 +52,14 @@ hello_world_c
 └── README.md                  This is the file you are currently reading
 ```
 
+Note: the CMakeLists.txt files contain hello_world as the project name. Test if this compiles well, despite the fact that all files are in hello_world_c.
+
+
 The contents of the folder is copied into a new folder for the C++ code:
+Identify the changes in this diagram.
 
 ```
-**hello_world_cpp**
+hello_world_cpp                
 ├── CMakeLists.txt
 ├── example_test.py            Python script used for automated example testing
 ├── main
