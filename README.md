@@ -36,3 +36,18 @@ also see the hello_world readme.md and links therein, such as
 - The ESP-IDF environment can compile projects that use CMake.
 - The wrapping solution involves a.o. editing of the CMake files.
 - It would be interesting learn on how to convert non-CMake C projects (such as....) to CMake. This would open up a large amount of C codes for doing the conversion to C++ or Arduino IDE. 
+
+Here is the folder structure of the original example (taken from the README supplied with the example):
+
+Below is short explanation of remaining files in the project folder.
+
+```
+├── CMakeLists.txt
+├── example_test.py            Python script used for automated example testing
+├── main
+│   ├── CMakeLists.txt
+│   ├── component.mk           Component make file
+│   └── hello_world_main.c
+├── Makefile                   Makefile used by legacy GNU Make
+└── README.md                  This is the file you are currently reading
+```
