@@ -1,4 +1,5 @@
-# Hello World Example
+# Hello World Example C++ 
+(now with main.cpp instead of hello_world_main.c)
 
 Starts a FreeRTOS task to print "Hello World".
 
@@ -16,7 +17,7 @@ Select the instructions depending on Espressif chip installed on your developmen
 
 ## Example folder contents
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+The project **hello_world** contains one source file in **C++** language [main.cpp](main/main.cpp). **It calls app_main, which is the original C code with: extern "C" { void app_main(); }** The file is located in folder [main](main). 
 
 ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both). 
 
@@ -28,7 +29,7 @@ Below is short explanation of remaining files in the project folder.
 ├── main
 │   ├── CMakeLists.txt
 │   ├── component.mk           Component make file
-│   └── hello_world_main.c
+│   └── main.cpp
 ├── Makefile                   Makefile used by legacy GNU Make
 └── README.md                  This is the file you are currently reading
 ```
