@@ -52,7 +52,7 @@ hello_world_c
 └── README.md                  This is the file you are currently reading
 ```
 
-Note: the CMakeLists.txt files contain hello_world as the project name. Test if this compiles well, despite the fact that all files are in hello_world_c.
+Note: the CMakeLists.txt files contain "hello_world", being the original project name. There is NO relation with the name of the project folder (hello_world_c). THe project compiles and flashes well.
 
 
 The contents of the folder is copied into a new folder for the C++ code:
@@ -70,7 +70,11 @@ hello_world_cpp
 └── README.md                  This is the file you are currently reading
 ```
 
-
+1. Open “project_name\CMakeList.txt” file using any text editor and edit: change “project(hello-world)” into “project(project-name)”, save the file.
+2. Open “project_name\Makefile” file using any text editor and edit: “PROJECT_NAME := hello-world” into “PROJECT_NAME := project-name”, save the file.
+3. Open “project_name\main\CMakeList.txt” file using any text editor and edit: change “hello_world_main.c” into “main.cpp”, save the file.
+4. Rename the file “hello_world_main.c” in the folder “project_name\main\ ” into “main.cpp”.
+5. Open “project_name\main\main.cpp” file using any text editor and edit: add the following statement extern “C” { void app_main(); } before void app_main() , see Figure 4, save the file.
 
 
 
