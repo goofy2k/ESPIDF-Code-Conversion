@@ -37,11 +37,11 @@ also see the hello_world readme.md and links therein, such as
 - The wrapping solution involves a.o. editing of the CMake files.
 - It would be interesting learn on how to convert non-CMake C projects (such as....) to CMake. This would open up a large amount of C codes for doing the conversion to C++ or Arduino IDE. 
 
-Here is the folder structure of the original example (taken from the README supplied with the example):
+Here is the structure of the original project in folder hello_world_C (taken from the README supplied with the example):
 
-Below is short explanation of remaining files in the project folder.
 
 ```
+hello_world_c
 ├── CMakeLists.txt
 ├── example_test.py            Python script used for automated example testing
 ├── main
@@ -51,3 +51,22 @@ Below is short explanation of remaining files in the project folder.
 ├── Makefile                   Makefile used by legacy GNU Make
 └── README.md                  This is the file you are currently reading
 ```
+
+The contents of the folder is copied into a new folder for the C++ code:
+
+```
+**hello_world_cpp**
+├── CMakeLists.txt
+├── example_test.py            Python script used for automated example testing
+├── main
+│   ├── CMakeLists.txt
+│   ├── component.mk           Component make file
+│   └── hello_world_main.c
+├── Makefile                   Makefile used by legacy GNU Make
+└── README.md                  This is the file you are currently reading
+```
+
+
+
+
+
