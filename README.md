@@ -79,7 +79,7 @@ hello_world_cpp
 I presume that 3,4 and 5 are the essential changes.
 
 contents of hello_world_main.c:
-
+**BEFORE**
 ```
 #include "esp_system.h"
 #include "esp_spi_flash.h"
@@ -92,7 +92,7 @@ void app_main(void)
 ```
 
 contents of main.cpp:
-
+**AFTER**
 ```
 #include "esp_system.h"
 #include "esp_spi_flash.h"
