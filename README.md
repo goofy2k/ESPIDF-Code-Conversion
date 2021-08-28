@@ -49,10 +49,10 @@ hello_world_c
 │   ├── component.mk           Component make file
 │   └── hello_world_main.c
 ├── Makefile                   Makefile used by legacy GNU Make
-└── README.md                  This is the file you are currently reading
+└── README.md                  
 ```
 
-Note: the CMakeLists.txt files contain hello_world as the project name. Test if this compiles well, despite the fact that all files are in hello_world_c.
+Note: the CMakeLists.txt files contain "hello_world", being the original project name. There is NO relation with the name of the project folder (hello_world_c). The project compiles and flashes well.
 
 
 The contents of the folder is copied into a new folder for the C++ code:
@@ -60,17 +60,50 @@ Identify the changes in this diagram.
 
 ```
 hello_world_cpp                
-├── CMakeLists.txt
-├── example_test.py            Python script used for automated example testing
+├── CMakeLists.txt             1.
+├── example_test.py            
 ├── main
-│   ├── CMakeLists.txt
-│   ├── component.mk           Component make file
-│   └── hello_world_main.c
-├── Makefile                   Makefile used by legacy GNU Make
-└── README.md                  This is the file you are currently reading
+│   ├── CMakeLists.txt         3.
+│   ├── component.mk           
+│   └── main.cpp     4.  5.
+├── Makefile                   2.
+└── README.md                  
 ```
 
+1. Open “project_name\CMakeList.txt” file using any text editor and edit: change “project(hello-world)” into “project(project-name)”, save the file.
+2. Open “project_name\Makefile” file using any text editor and edit: “PROJECT_NAME := hello-world” into “PROJECT_NAME := project-name”, save the file.
+3. Open “project_name\main\CMakeList.txt” file using any text editor and edit: change “hello_world_main.c” into “main.cpp”, save the file.
+4. Rename the file “hello_world_main.c” in the folder “project_name\main\ ” into “main.cpp”.
+5. Open “project_name\main\main.cpp” file using any text editor and edit: add the following statement extern “C” { void app_main(); } before void app_main() , see Figure 4, save the file.
 
 
 
+contents of hello_world_main.c:
+**BEFORE**
+```
+#include "esp_system.h"
+#include "esp_spi_flash.h"
 
+void app_main(void)
+{
+    printf("Hello world of C!\n");
+
+    /* Print chip information */
+```
+
+contents of main.cpp:
+**AFTER**
+```
+#include "esp_system.h"
+#include "esp_spi_flash.h"
+
+extern “C” { void app_main(); }
+
+void app_main(void)
+{
+    printf("Hello world of C++!\n");
+
+    /* Print chip information */
+```
+
+I presumed that 3,4 and 5 are the essential changes, so I skipped 1 and 2 :-). The code compiles and runs well!
