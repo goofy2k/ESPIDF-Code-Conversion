@@ -1,5 +1,5 @@
 # Hello World Example C++ 
-(now with main.cpp instead of hello_world_main.c)
+(now with main.cpp instead of hello_world_main.c and some C code from app_main tranferred to a newly created **systeminfo** lib)
 
 Starts a FreeRTOS task to print "Hello World".
 
@@ -17,7 +17,7 @@ Select the instructions depending on Espressif chip installed on your developmen
 
 ## Example folder contents
 
-The project **hello_world** contains one source file in **C++** language [main.cpp](main/main.cpp). **It calls app_main, which is the original C code with: extern "C" { void app_main(); }** The file is located in folder [main](main). 
+The project **hello_world** contains one source file in **C++** language [main.cpp](main/main.cpp). **It calls app_main, which is the original C code with: extern "C" { void app_main(); }** The file is located in folder [main](main). **Some of the C code in app_main is transferred to C++ code in systeminfo.cpp.**
 
 ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both). 
 
@@ -27,9 +27,11 @@ Below is short explanation of remaining files in the project folder.
 ├── CMakeLists.txt
 ├── example_test.py            Python script used for automated example testing
 ├── main
-│   ├── CMakeLists.txt
+│   ├── CMakeLists.txt         Now also contains reference to systeminfo.cpp
 │   ├── component.mk           Component make file
-│   └── main.cpp
+│   └── main.cpp               Updated to call systeminfo.cpp
+|   |__ systeminfo.cpp         Added
+|   |__ systeminfo.h           Added
 ├── Makefile                   Makefile used by legacy GNU Make
 └── README.md                  This is the file you are currently reading
 ```
