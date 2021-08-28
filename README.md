@@ -25,4 +25,6 @@ Each folder contains the original README that describes how to compile the examp
 
 ## Learnings / summary
 
-...
+- The ESP-IDF environment can compile projects that use CMake.
+- The wrapping solution involves a.o. editing of the CMake files.
+- It would be interesting learn on how to convert non-CMake C projects (such as....) to CMake. This would open up a large amount of C codes for doing the conversion to C++ or Arduino IDE. 
