@@ -9,8 +9,9 @@ Similar things are true for the **software**. You are lucky when the manufacture
 
 There are all kinds of code snippets on the web. Some of them are specific for the Arduino IDE (C++-like), but most of them are written in either C or C++. This implies that I have to abandon the Arduino IDE and go for a programming environment that can handle C / C++ only code. In fact the best way would be to go the system supported by the manufacturer of the heart of the boards: Espressif.
 
-Espressif offers a extensively documented (link) firmware development system (ESP-IDF). This can be used from the command line (with calls to idf.py) or via IDEs such as Eclipse or Visual Studio with the ESP-idf extension. None of these environments is very easy to use. Currently I have the best experience with **ESP-IDF from the command line**.  In the ESP-IDF package (Github link) is a large number of well-sorted examples. They are very well documented in the README files. There is one drawback ...... most of them (if not all) are written in C. This forms a hurdle for using those examples as a basis for developemnt of my own firmware for several reasons:
-- This is even more ENFORCED? because the Espressif-IDF documentation does not describe how to start a project from scratch (not for C++ projects, but even not for C projects !). - Starting from a preexisting example gives a headstart 
+Espressif offers a extensively documented (link) firmware development system (ESP-IDF). This can be used from the command line (with calls to idf.py) or via IDEs such as Eclipse or Visual Studio with the ESP-idf extension. None of these environments is very easy to use. Currently I have the best experience with **ESP-IDF from the command line**.  In the ESP-IDF package (Github link) is a large number of examples, well sorted per application area. This gives development of own code based on them a headstart . They are very well documented in the README files. There are several hurdles to take in using these examples and developing own code based on them: 
+- most of them (if not all) are written in C and my knowledge of C is poor. 
+- the Espressif-IDF documentation does not describe how to start a project from scratch (not for C++ projects, but even not for C projects !). 
 
 The solution is nearby!
 
