@@ -1,4 +1,4 @@
-# Hello World Example
+# Hello World Example (C)
 
 Starts a FreeRTOS task to print "Hello World".
 
