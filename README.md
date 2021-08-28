@@ -1,5 +1,5 @@
-# ESPIDF Code Conversion
- Conversion from c to cpp to Arduino to support re-use of snippets
+# ESP-IDF Code Conversion
+ Conversion from C to C++ to Arduino .ino to support re-use of snippets
 
 ## Purpose
 
